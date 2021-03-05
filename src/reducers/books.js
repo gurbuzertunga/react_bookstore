@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { CREATE_BOOK, REMOVE_BOOK } from '../actionTypes';
 
 const initialState = { books: [{ id: Math.random(), title: 'The Dark Tower', category: 'Horror' }, { id: Math.random(), title: 'Fantastic Beast', category: 'Sci-Fi' }] };

@@ -11,7 +11,11 @@ export default function BooksForm() {
 
       <label htmlFor="category">Choose a category:</label>
       <select name="category" id="category">
-        <option value="" />
+        {categories.map(cat => (
+          <option key={cat} value="categories">
+            {cat}
+          </option>
+        ))}
       </select>
 
       <button type="submit">Add Book</button>
