@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { createBook } from '../actions/index';
 
 const data = {
   title: '',
   category: 'Action',
 };
 
-export default function BooksForm() {
+function BooksForm() {
   const [state, setState] = useState(data);
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -16,8 +18,13 @@ export default function BooksForm() {
   };
 
   const handleSubmit = e => {
-    console.log(state);
+    const newID = Math.floor(Math.random() * 100);
+    createBook({ ...state, newID });
     e.preventDefault();
+    setState({
+      title: '',
+      category: '',
+    });
   };
 
   return (
@@ -42,3 +49,8 @@ export default function BooksForm() {
     </form>
   );
 }
+
+export default connect(
+  null,
+  { createBook },
+)(BooksForm);

@@ -1,9 +1,10 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actionTypes';
 
-export const createBook = book => ({ // eslint-disable-line
+export const createBook = book => ({
   type: CREATE_BOOK,
+  payload: book,
 });
 
-export const removeBook = book => ({ // eslint-disable-line
+export const removeBook = () => ({
   type: REMOVE_BOOK,
 });
