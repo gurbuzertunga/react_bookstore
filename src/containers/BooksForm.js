@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 
 const data = {
+  id: '',
   title: '',
   category: 'Action',
 };
 
-function BooksForm() {
+function BooksForm({ createBook }) {
   const [state, setState] = useState(data);
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -18,8 +20,7 @@ function BooksForm() {
   };
 
   const handleSubmit = e => {
-    const newID = Math.floor(Math.random() * 100);
-    createBook({ ...state, newID });
+    createBook({ ...state, id: Math.floor(Math.random() * 100) });
     e.preventDefault();
     setState({
       title: '',
@@ -54,3 +55,7 @@ export default connect(
   null,
   { createBook },
 )(BooksForm);
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
