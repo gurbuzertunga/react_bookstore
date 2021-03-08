@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { removeBook } from '../actions';
 
 export default function Book({ book }) {
   const { id, title, category } = book;
 
-  const handleRemove = () => {
+  const handleRemoveBook = book => {
+    removeBook(book);
+  };
 
+  const removeBookHandler = () => {
+    console.log(book);
+    handleRemoveBook(book);
   };
 
   return (
@@ -14,7 +20,7 @@ export default function Book({ book }) {
       <td>{title}</td>
       <td>{category}</td>
       <td>
-        <button type="submit" onClick={handleRemove(book)}>Remove Book</button>
+        <button type="submit" onClick={removeBookHandler}>Remove Book</button>
       </td>
     </tr>
   );

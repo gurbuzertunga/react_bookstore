@@ -11,8 +11,10 @@ export default (state = initialState, action) => {
         books: [...state.books, action.payload],
       };
     case REMOVE_BOOK:
+      console.log('TRYING TO REMOVE');
       return {
         ...state,
+        books: [...state.books.filter(book => book.id !== action.payload.id)],
       };
     default:
       return state;
