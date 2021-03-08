@@ -1,6 +1,6 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actionTypes';
 
-const initialState = { books: [{ id: Math.floor(Math.random() * 10), title: 'The Dark Tower', category: 'Horror' }, { id: Math.floor(Math.random() * 10), title: 'Fantastic Beast', category: 'Sci-Fi' }] };
+const initialState = { books: [{ id: Math.floor(Math.random() * 100), title: 'The Dark Tower', category: 'Horror' }, { id: Math.floor(Math.random() * 10), title: 'Fantastic Beast', category: 'Sci-Fi' }] };
 
 export default (state = initialState, action) => {
   switch (action.type) {

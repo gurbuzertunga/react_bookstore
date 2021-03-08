@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 
-const BooksList = ({ books }) => ( // eslint-disable-line
+const BooksList = ({ books }) => (
   <table>
     <thead>
       <tr>
@@ -12,9 +12,11 @@ const BooksList = ({ books }) => ( // eslint-disable-line
         <th>Category</th>
       </tr>
     </thead>
-    {books && books.length // eslint-disable-line
-      ? books.map(book => <Book key={book} book={book} />) // eslint-disable-line
-      : 'No Book Found!'}
+    <tbody>
+      {books && books.length
+        ? books.map(book => <Book key={book.id} book={book} />)
+        : 'No Book Found!'}
+    </tbody>
   </table>
 );
 
@@ -25,14 +27,6 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps)(BooksList);
 
-Book.defaultProps = {
-  books: {},
-};
-
-Book.propTypes = {
-  books: PropTypes.shape({
-    length: PropTypes.number,
-    title: PropTypes.string,
-    category: PropTypes.string,
-  }),
+BooksList.propTypes = {
+  books: PropTypes.instanceOf(Array).isRequired,
 };
