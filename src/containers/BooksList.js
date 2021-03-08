@@ -22,11 +22,11 @@ const BooksList = ({ books }) => (
 
 const mapStateToProps = state => {
   const { books } = state;
-  return books;
+  return { books };
 };
-
-export default connect(mapStateToProps)(BooksList);
 
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
 };
+
+export default connect(mapStateToProps)(BooksList);

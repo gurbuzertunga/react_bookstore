@@ -4,9 +4,14 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './index.css';
 import App from './App';
-import rootReducer from './reducers';
+import bookReducer from './reducers/books';
 
-const store = createStore(rootReducer);
+const initialState = {
+  books: [{ id: Math.floor(Math.random() * 100), title: 'The Dark Tower', category: 'Horror' },
+    { id: Math.floor(Math.random() * 10), title: 'Fantastic Beast', category: 'Sci-Fi' }],
+};
+
+const store = createStore(bookReducer, initialState);
 
 ReactDOM.render(
   <React.StrictMode>
