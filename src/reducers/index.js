@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
 import books from './books';
-import filters from './filter';
+import filter from './filter';
 
-export default combineReducers({ books, filters });
+export default combineReducers({ books, filter });
