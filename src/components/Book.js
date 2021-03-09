@@ -4,17 +4,13 @@ import PropTypes from 'prop-types';
 function Book({ book, handleRemoveBook }) {
   const { id, title, category } = book;
 
-  const removeBookHandler = () => {
-    handleRemoveBook(book);
-  };
-
   return (
     <tr>
       <td>{id}</td>
       <td>{title}</td>
       <td>{category}</td>
       <td>
-        <button type="submit" onClick={removeBookHandler}>Remove Book</button>
+        <button type="submit" onClick={() => handleRemoveBook(book)}>Remove Book</button>
       </td>
     </tr>
   );
