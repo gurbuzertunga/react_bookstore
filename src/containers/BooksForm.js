@@ -29,25 +29,22 @@ function BooksForm({ createBook }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} method="POST">
-      <label htmlFor="title">
-        Title:
-        <input type="text" name="title" id="title" value={state.title} onChange={handleInputChange} required />
-      </label>
-
-      <label htmlFor="category">
-        Choose a category:
-        <select name="category" id="category" value={state.category} onChange={handleInputChange}>
+    <div className="flex flex-col mx-12">
+      <h2 className="text-2xl font-bold text-gray-500">ADD NEW BOOK</h2>
+      <form onSubmit={handleSubmit} method="POST" className="flex mt-5">
+        <input className="w-7/12 mr-4 pl-4 border border-gray-300" placeholder="Book Title" type="text" name="title" id="title" value={state.title} onChange={handleInputChange} required />
+        <select className="w-3/12 mr-4 text-gray-500 pl-4 border border-gray-300" name="category" id="category" value={state.category} onChange={handleInputChange}>
+          <option key="default" disabled selected>Category</option>
           {categories.map(cat => (
             <option key={cat} value={cat}>
               {cat}
             </option>
           ))}
         </select>
-      </label>
 
-      <button type="submit">Add Book</button>
-    </form>
+        <button className="w-2/12 mr-4 px-4 py-3 bg-blue-800 text-white rounded" type="submit">Add Book</button>
+      </form>
+    </div>
   );
 }
 
