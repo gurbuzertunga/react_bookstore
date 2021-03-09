@@ -20,8 +20,8 @@ function BooksForm({ createBook }) {
   };
 
   const handleSubmit = e => {
-    createBook({ ...state, id: Math.floor(Math.random() * 100) });
     e.preventDefault();
+    createBook({ ...state, id: Math.floor(Math.random() * 100) });
     setState({
       title: '',
       category: '',
@@ -29,7 +29,7 @@ function BooksForm({ createBook }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} method="POST">
       <label htmlFor="title">
         Title:
         <input type="text" name="title" id="title" value={state.title} onChange={handleInputChange} required />
