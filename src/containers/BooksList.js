@@ -38,6 +38,11 @@ const BooksList = ({ books, removeBook, changeFilter }) => {
 
 const mapStateToProps = state => {
   const { books } = state;
+  const { filter } = state;
+  if (filter !== 'All') {
+    const result = books.filter(book => book.category === filter);
+    return { books: result };
+  }
   return { books };
 };
 
