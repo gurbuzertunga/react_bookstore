@@ -7,6 +7,7 @@ const data = {
   id: '',
   title: '',
   category: 'Action',
+  author: '',
 };
 
 function BooksForm({ createBook }) {
