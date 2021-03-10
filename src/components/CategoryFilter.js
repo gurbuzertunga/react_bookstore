@@ -6,7 +6,7 @@ const CategoryFilter = ({ onChangeHandler }) => {
   return (
     <div className="category-filter">
       <label htmlFor="category">
-        Choose a category:
+        Category:
         <select name="category" id="category" onChange={e => onChangeHandler(e.target.value)}>
           {categories.map(cat => (
             <option key={cat} value={cat}>
