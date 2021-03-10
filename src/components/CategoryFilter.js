@@ -5,8 +5,8 @@ const CategoryFilter = ({ onChangeHandler }) => {
 
   return (
     <div className="category-filter">
-      <label htmlFor="category">
-        Category:
+      <label htmlFor="category" className="pr-4">
+        CATEGORY
         <select name="category" id="category" onChange={e => onChangeHandler(e.target.value)}>
           {categories.map(cat => (
             <option key={cat} value={cat}>

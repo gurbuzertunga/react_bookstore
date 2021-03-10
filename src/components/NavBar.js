@@ -7,7 +7,7 @@ export default function NavBar() {
       <div className="flex justify-between w-1/2 items-baseline">
         <h1 className="text-blue-500 text-2xl font-bold">Bookstore CMS</h1>
         <p className="text-xs">BOOKS</p>
-        <p className="text-gray-500 text-xs"><CategoryFilter /></p>
+        <p className="text-gray-500 text-xs"><CategoryFilter onChangeHandler={onChangeHandler} /></p>
       </div>
       <div className="flex w-1/2 justify-end items-end">
         <div className="p-1 border border-gray-300 rounded-full">
