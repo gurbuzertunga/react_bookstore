@@ -2,10 +2,10 @@ import { CREATE_BOOK, REMOVE_BOOK } from '../actionTypes';
 
 const initialState = [
   {
-    id: Math.floor(Math.random() * 100), title: 'The Dark Tower', category: 'Horror', author: 'JOHN DOE',
+    id: Math.floor(Math.random() * 100), title: 'The Dark Tower', category: 'Horror', author: 'Stephen King',
   },
   {
-    id: Math.floor(Math.random() * 10), title: 'Fantastic Beast', category: 'Sci-Fi', author: 'j.k Rowlings',
+    id: Math.floor(Math.random() * 10), title: 'Fantastic Beasts and Where to Find them', category: 'Sci-Fi', author: 'J.K Rowlings',
   },
 ];
 

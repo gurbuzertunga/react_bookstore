@@ -26,15 +26,17 @@ function BooksForm({ createBook }) {
     setState({
       title: '',
       category: '',
+      author: '',
     });
   };
 
   return (
-    <div className="flex flex-col mx-9 bottom-0 fixed w-full pr-16 py-12">
+    <div className="flex flex-col w-full px-12 py-12">
       <h2 className="text-2xl font-bold text-gray-500">ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit} method="POST" className="flex mt-5">
-        <input className="w-7/12 mr-4 pl-4 border border-gray-300 bg-white" placeholder="Book Title" type="text" name="title" id="title" value={state.title} onChange={handleInputChange} required />
-        <select className="w-3/12 mr-4 text-gray-500 pl-4 border border-gray-300 bg-white" name="category" id="category" value={state.category} onChange={handleInputChange}>
+        <input className="w-5/12 mr-4 pl-4 border border-gray-300 bg-white" placeholder="Book Title" type="text" name="title" id="title" value={state.title} onChange={handleInputChange} required />
+        <input className="w-3/12 mr-4 pl-4 border border-gray-300 bg-white" placeholder="Author" type="text" name="author" id="author" value={state.author} onChange={handleInputChange} required />
+        <select className="w-2/12 mr-4 text-gray-500 pl-4 border border-gray-300 bg-white" name="category" id="category" value={state.category} onChange={handleInputChange}>
           <option key="default" disabled selected>Category</option>
           {categories.map(cat => (
             <option key={cat} value={cat}>
