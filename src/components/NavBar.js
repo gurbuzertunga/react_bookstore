@@ -10,11 +10,11 @@ function NavBar({ changeFilter }) {
   };
 
   return (
-    <nav className="flex px-12 pt-8 pb-4 bg-white border-b-1 border-black">
+    <nav className="flex flex-col md:flex-row px-12 pt-8 pb-4 bg-white border-b-1 border-black">
       <div className="flex justify-between w-1/2 items-baseline">
         <h1 className="montserrat text-blue-500 text-2xl font-bold">Bookstore CMS</h1>
         <p className="montserrat text-xs">BOOKS</p>
-        <p className="montserrat text-gray-500 text-xs"><CategoryFilter onChangeHandler={handleFilterChange} /></p>
+        <div className="montserrat text-gray-500 text-xs"><CategoryFilter onChangeHandler={handleFilterChange} /></div>
       </div>
       <div className="flex w-1/2 justify-end items-end">
         <div className="p-1 border border-gray-300 rounded-full">

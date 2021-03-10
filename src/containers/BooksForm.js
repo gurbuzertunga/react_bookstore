@@ -37,7 +37,7 @@ function BooksForm({ createBook }) {
         <input className="w-5/12 mr-4 pl-4 border border-gray-300 bg-white" placeholder="Book Title" type="text" name="title" id="title" value={state.title} onChange={handleInputChange} required />
         <input className="w-3/12 mr-4 pl-4 border border-gray-300 bg-white" placeholder="Author" type="text" name="author" id="author" value={state.author} onChange={handleInputChange} required />
         <select className="w-2/12 mr-4 text-gray-500 pl-4 border border-gray-300 bg-white" name="category" id="category" value={state.category} onChange={handleInputChange}>
-          <option key="default" disabled selected>Category</option>
+          <option key="default" disabled defaultValue="None">Category</option>
           {categories.map(cat => (
             <option key={cat} value={cat}>
               {cat}
