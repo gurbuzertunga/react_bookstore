@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://magic-books11.herokuapp.com/)
+[Live Demo Link](https://bookstorecms.netlify.app)
 
 ## Getting Started
 
