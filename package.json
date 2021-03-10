@@ -3,21 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.1.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
+    "react-circular-progressbar": "^2.0.3",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "croco test",
     "eject": "react-scripts eject",
     "fix": "stylelint \"**/*.css\" --fix && eslint . --fix"
   },
@@ -40,6 +43,8 @@
     ]
   },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9.8.6",
     "babel-eslint": "10.1.x",
     "eslint": "7.11.x",
     "eslint-config-airbnb": "18.1.x",
@@ -47,9 +52,11 @@
     "eslint-plugin-jsx-a11y": "6.2.x",
     "eslint-plugin-react": "7.20.x",
     "eslint-plugin-react-hooks": "2.5.x",
+    "postcss": "^7.0.35",
     "stylelint": "13.3.x",
     "stylelint-config-standard": "20.0.x",
     "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "3.17.x"
+    "stylelint-scss": "3.17.x",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
   }
 }
