@@ -14,7 +14,9 @@ function Book({ book, handleRemoveBook }) {
         <span className="text-sm text-blue-700">{author}</span>
         <ul className="flex my-3 text-blue-400">
           <li className="pr-3 border-r">Comments</li>
-          <li className="px-3 border-r">Remove</li>
+          <li className="px-3 border-r hover:text-red-500" onClick={() => handleRemoveBook(book)}>
+            <button type="button">Remove</button>
+          </li>
           <li className="px-3">Edit</li>
         </ul>
       </div>
