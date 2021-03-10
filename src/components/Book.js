@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 /* eslint-disable */
 
 function Book({ book, handleRemoveBook }) {
-  const { title, category } = book;
+  const { title, category, author } = book;
 
   return (
     <div id="book-component" className="flex justify-between p-4 bg-white my-2 mx-9 border">
       <div id="d-book" className="w-1/2">
         <span className="font-semibold text-gray-700">{category}</span>
         <h2 className="font-bold text-2xl my-1">{title}</h2>
-        <span className="text-sm text-blue-700">JOHN DOE</span>
+        <span className="text-sm text-blue-700">{author}</span>
         <ul className="flex my-3 text-blue-400">
           <li className="pr-3 border-r">Comments</li>
           <li className="px-3 border-r">Remove</li>
@@ -43,6 +43,7 @@ Book.propTypes = {
     id: PropTypes.number,
     title: PropTypes.string,
     category: PropTypes.string,
+    author: PropTypes.string,
   }),
   handleRemoveBook: PropTypes.func.isRequired,
 };
