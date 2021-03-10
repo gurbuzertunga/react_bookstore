@@ -10,9 +10,9 @@ function Book({ book, handleRemoveBook }) {
 
   return (
     <div id="book-component" className="flex justify-between p-1 md:p-4 bg-white my-2 md:mx-9 border">
-      <div id="d-book" className="md:w-1/2 w-full">
+      <div id="d-book" className="md:w-1/2 w-screen">
         <span className="montserrat font-semibold text-gray-700">{category}</span>
-        <h2 className="robotoSlab font-bold text-2xl my-1">{title}</h2>
+        <h2 className="robotoSlab font-bold md:text-2xl break-words text:xl my-1">{title}</h2>
         <span className="robotoSlab text-sm text-blue-700">{author}</span>
         <ul className="robotoSlab flex my-3 text-blue-400">
           <li className="robotoSlab pr-3 border-r">Comments</li>
